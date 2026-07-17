@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment
+.env
+
+# build
+dist/
+
+# macOS
+.DS_Store
+
+# Vite
+frontend/dist/
+
+# backend logs
+backend/logs/
+
+# coverage
+coverage/
