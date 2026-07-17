@@ -10,8 +10,6 @@ npm-debug.log*
 # build
 dist/
 
-# macOS
-.DS_Store
 
 # Vite
 frontend/dist/
