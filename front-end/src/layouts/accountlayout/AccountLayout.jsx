@@ -24,23 +24,37 @@ const AccountLayout = () => {
 
                     <div className={styles.sidebar}>
 
-                        <NavLink end to="/account">
+                        <NavLink end to="/account" end
+                            to="/account"
+                            className={({ isActive }) =>
+                                `${isActive ? styles.active : ""}`
+                            }>
                             Trang tài khoản
                         </NavLink>
 
-                        <NavLink to="/account/orders">
+                        <NavLink to="/account/orders" end
+                            className={({ isActive }) =>
+                                `${isActive ? styles.active : ""}`
+                            }>
                             Đơn hàng
                         </NavLink>
 
-                        <NavLink to="/account/address">
+                        <NavLink to="/account/address" className={({ isActive }) =>
+                            `${isActive ? styles.active : ""}`
+                        }>
+
                             Địa chỉ
                         </NavLink>
 
-                        <NavLink to="/account/profile">
+                        <NavLink to="/account/profile" className={({ isActive }) =>
+                            `${isActive ? styles.active : ""}`
+                        }>
                             Thông tin tài khoản
                         </NavLink>
 
-                        <NavLink to="/account/password">
+                        <NavLink to="/account/password" className={({ isActive }) =>
+                            `${isActive ? styles.active : ""}`
+                        }>
                             Đổi mật khẩu
                         </NavLink>
 

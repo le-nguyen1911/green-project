@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import logo from "../images/logo.png";
+import logo from "../assets/logo.png";
 import 'primeicons/primeicons.css';
 
 
@@ -79,7 +79,7 @@ const LayoutMain = () => {
             </nav>
 
             <Outlet />
-            <footer>
+            <footer className='bg-light'>
 
                 <div className="footer">
                     <div className="footer-content row d-flex justify-content-center align-items-center border-bottom" >

@@ -15,21 +15,27 @@ const AccountBreadcrumb = () => {
     const current = breadcrumbMap[location.pathname]
     return (
         <div className={styles.breadcrumb}>
-            <Link to="/">Trang chủ</Link>
+            <div className="pathaaction">
+                <Link to="/">Trang chủ</Link>
 
-            <span>/</span>
+                <span>/</span>
 
-            <Link to="/account">Tài khoản</Link>
+                <Link to="/account">Tài khoản</Link>
 
-            {location.pathname !== "/account" && (
-                <>
-                    <span>/</span>
+                {location.pathname !== "/account" && (
+                    <>
+                        <span>/</span>
 
-                    <span className={styles.active}>
-                        {current}
-                    </span>
-                </>
-            )}
+                        <span className={styles.active}>
+                            {current}
+                        </span>
+                    </>
+                )}
+            </div>
+
+            <div className={styles.logout}>
+                Đăng xuất
+            </div>
         </div>
     )
 }
