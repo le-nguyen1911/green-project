@@ -232,7 +232,7 @@
             "phone": "0901234567",
             "password_hash": "hashed_password_1",
             "address": "123 Đường Lê Lợi, Quận 1, TP.HCM",
-            "role": "customer",
+            "role": "user",
             "created_at": "2026-01-05T08:00:00Z"
         },
         {
@@ -242,7 +242,7 @@
             "phone": "0912345678",
             "password_hash": "hashed_password_2",
             "address": "45 Đường Trần Phú, Đà Nẵng",
-            "role": "customer",
+            "role": "user",
             "created_at": "2026-02-10T08:00:00Z"
         },
         {

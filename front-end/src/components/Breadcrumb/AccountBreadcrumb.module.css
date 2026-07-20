@@ -1,0 +1,19 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: #222;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #6F4E37;
+}
+
+.active {
+    color: #6F4E37;
+    font-weight: 600;
+}

@@ -55,10 +55,13 @@ const LayoutMain = () => {
                                     />
                                     <i className="pi pi-search ms-2"></i>
                                 </div>
+                                <Link to={"/wishlist"} className='text-dark'>
+                                    <i className="pi pi-heart fs-5"></i>
+                                </Link>
 
-                                <i className="pi pi-heart fs-5"></i>
-
-                                <i className="pi pi-user fs-5"></i>
+                                <Link to={"/account"} className='text-dark'>
+                                    <i className="pi pi-user fs-5"></i>
+                                </Link>
 
                                 <span className="position-relative">
                                     <i className="pi pi-shopping-cart fs-5"></i>
@@ -78,7 +81,7 @@ const LayoutMain = () => {
             <Outlet />
             <footer>
 
-                <div className="footer"> 
+                <div className="footer">
                     <div className="footer-content row d-flex justify-content-center align-items-center border-bottom" >
 
                         <div className="footer-col about col-lg-3 col-md-12 mb-12 mb-lg-0">
