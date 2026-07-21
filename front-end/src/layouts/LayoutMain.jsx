@@ -2,16 +2,16 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import 'primeicons/primeicons.css';
+import { useUser } from '../hooks/UserContext';
 
 
 const LayoutMain = () => {
-
+    const {user} = useUser()
     return (
         <>
             <nav className="container-fluid border-bottom bg-white py-3">
                 <div className="container">
                     <div className="row align-items-center">
-
                         <div className="col-4">
                             <ul className="nav gap-4 fw-semibold">
                                 <li className="nav-item">

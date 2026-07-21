@@ -1,12 +1,36 @@
 {
   "categories": [
-    { "id": 1, "name": "Cà phê rang xay", "slug": "ca-phe-rang-xay", "description": "Các loại cà phê rang xay nguyên chất" },
-    { "id": 2, "name": "Cà phê hòa tan", "slug": "ca-phe-hoa-tan", "description": "Cà phê hòa tan tiện lợi" },
-    { "id": 3, "name": "Cà phê đặc sản", "slug": "ca-phe-dac-san", "description": "Cà phê cao cấp, đặc sản vùng miền" },
-    { "id": 4, "name": "Cà phê đóng lon/chai", "slug": "ca-phe-dong-lon", "description": "Cà phê pha sẵn, uống liền" },
-    { "id": 5, "name": "Dụng cụ pha chế", "slug": "dung-cu-pha-che", "description": "Phin, máy pha, ly, bình đựng cà phê" }
+    {
+      "id": 1,
+      "name": "Cà phê rang xay",
+      "slug": "ca-phe-rang-xay",
+      "description": "Các loại cà phê rang xay nguyên chất"
+    },
+    {
+      "id": 2,
+      "name": "Cà phê hòa tan",
+      "slug": "ca-phe-hoa-tan",
+      "description": "Cà phê hòa tan tiện lợi"
+    },
+    {
+      "id": 3,
+      "name": "Cà phê đặc sản",
+      "slug": "ca-phe-dac-san",
+      "description": "Cà phê cao cấp, đặc sản vùng miền"
+    },
+    {
+      "id": 4,
+      "name": "Cà phê đóng lon/chai",
+      "slug": "ca-phe-dong-lon",
+      "description": "Cà phê pha sẵn, uống liền"
+    },
+    {
+      "id": 5,
+      "name": "Dụng cụ pha chế",
+      "slug": "dung-cu-pha-che",
+      "description": "Phin, máy pha, ly, bình đựng cà phê"
+    }
   ],
-
   "products": [
     {
       "id": 1,
@@ -20,7 +44,10 @@
       "origin": "Đắk Lắk, Việt Nam",
       "roast_level": "Đậm",
       "weight": "500g",
-      "images": ["robusta_1.jpg", "robusta_2.jpg"],
+      "images": [
+        "robusta_1.jpg",
+        "robusta_2.jpg"
+      ],
       "description": "Cà phê Robusta nguyên chất, vị đắng mạnh, hàm lượng caffeine cao",
       "rating": 4.5,
       "review_count": 32,
@@ -38,7 +65,9 @@
       "origin": "Cầu Đất, Đà Lạt",
       "roast_level": "Vừa",
       "weight": "500g",
-      "images": ["arabica_1.jpg"],
+      "images": [
+        "arabica_1.jpg"
+      ],
       "description": "Vị chua thanh, hương thơm nhẹ nhàng, hậu vị ngọt",
       "rating": 4.7,
       "review_count": 21,
@@ -56,7 +85,9 @@
       "origin": "Buôn Ma Thuột",
       "roast_level": "Đậm",
       "weight": "250g",
-      "images": ["ca_phe_chon_1.jpg"],
+      "images": [
+        "ca_phe_chon_1.jpg"
+      ],
       "description": "Cà phê đặc sản cao cấp, hương vị đặc trưng độc đáo",
       "rating": 4.9,
       "review_count": 8,
@@ -74,7 +105,9 @@
       "origin": "Việt Nam",
       "roast_level": "Vừa",
       "weight": "20 gói x 20g",
-      "images": ["hoa_tan_1.jpg"],
+      "images": [
+        "hoa_tan_1.jpg"
+      ],
       "description": "Tiện lợi, pha nhanh, vị ngọt béo hài hòa",
       "rating": 4.2,
       "review_count": 54,
@@ -92,7 +125,9 @@
       "origin": "Sài Gòn",
       "roast_level": "Đậm",
       "weight": "1kg",
-      "images": ["phin_1.jpg"],
+      "images": [
+        "phin_1.jpg"
+      ],
       "description": "Pha phin đậm đà, hương thơm nồng, phù hợp gu truyền thống",
       "rating": 4.6,
       "review_count": 40,
@@ -110,7 +145,9 @@
       "origin": "Việt Nam",
       "roast_level": "Vừa",
       "weight": "330ml",
-      "images": ["lon_1.jpg"],
+      "images": [
+        "lon_1.jpg"
+      ],
       "description": "Sẵn sàng uống ngay, vị ngọt béo đặc trưng cà phê sữa đá",
       "rating": 4.3,
       "review_count": 67,
@@ -128,14 +165,15 @@
       "origin": "Việt Nam",
       "roast_level": null,
       "weight": "1 cái",
-      "images": ["phin_nhom_1.jpg"],
+      "images": [
+        "phin_nhom_1.jpg"
+      ],
       "description": "Phin nhôm truyền thống, bền, dễ vệ sinh",
       "rating": 4.4,
       "review_count": 18,
       "created_at": "2026-01-25T08:00:00Z"
     }
   ],
-
   "blogs": [
     {
       "id": 1,
@@ -147,7 +185,11 @@
       "summary": "Hướng dẫn từng bước pha cà phê phin đúng chuẩn tại nhà",
       "content": "Nội dung chi tiết về cách pha cà phê phin...",
       "published_at": "2026-04-01T09:00:00Z",
-      "tags": ["pha chế", "cà phê phin", "mẹo hay"]
+      "tags": [
+        "pha chế",
+        "cà phê phin",
+        "mẹo hay"
+      ]
     },
     {
       "id": 2,
@@ -159,7 +201,11 @@
       "summary": "So sánh hương vị, hàm lượng caffeine và cách trồng của hai loại cà phê phổ biến",
       "content": "Nội dung chi tiết về Arabica và Robusta...",
       "published_at": "2026-04-15T09:00:00Z",
-      "tags": ["arabica", "robusta", "kiến thức"]
+      "tags": [
+        "arabica",
+        "robusta",
+        "kiến thức"
+      ]
     },
     {
       "id": 3,
@@ -171,50 +217,63 @@
       "summary": "Danh sách những quán cà phê đặc sản nổi tiếng",
       "content": "Nội dung chi tiết về các quán cà phê...",
       "published_at": "2026-05-02T09:00:00Z",
-      "tags": ["review", "quán cà phê", "đặc sản"]
+      "tags": [
+        "review",
+        "quán cà phê",
+        "đặc sản"
+      ]
     }
   ],
-
   "users": [
     {
       "id": 1,
-      "full_name": "Nguyễn Văn A",
+      "fullname": "Nguyễn Văn A",
       "email": "nguyenvana@gmail.com",
       "phone": "0901234567",
       "password_hash": "hashed_password_1",
       "address": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+      "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "customer",
       "created_at": "2026-01-05T08:00:00Z"
     },
     {
       "id": 2,
-      "full_name": "Trần Thị B",
+      "fullname": "Trần Thị B",
       "email": "tranthib@gmail.com",
       "phone": "0912345678",
       "password_hash": "hashed_password_2",
       "address": "45 Đường Trần Phú, Đà Nẵng",
+      "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "customer",
       "created_at": "2026-02-10T08:00:00Z"
     },
     {
       "id": 3,
-      "full_name": "Admin Store",
+      "fullname": "Admin Store",
       "email": "admin@coffeeshop.vn",
       "phone": "0900000000",
       "password_hash": "hashed_password_admin",
       "address": "Kho tổng, Đắk Lắk",
+      "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "admin",
       "created_at": "2025-12-01T08:00:00Z"
     }
   ],
-
   "cart": [
     {
       "id": 1,
       "user_id": 1,
       "items": [
-        { "product_id": 1, "quantity": 2, "price": 85000 },
-        { "product_id": 6, "quantity": 3, "price": 15000 }
+        {
+          "product_id": 1,
+          "quantity": 2,
+          "price": 85000
+        },
+        {
+          "product_id": 6,
+          "quantity": 3,
+          "price": 15000
+        }
       ],
       "updated_at": "2026-07-15T10:30:00Z"
     },
@@ -222,19 +281,30 @@
       "id": 2,
       "user_id": 2,
       "items": [
-        { "product_id": 3, "quantity": 1, "price": 850000 }
+        {
+          "product_id": 3,
+          "quantity": 1,
+          "price": 850000
+        }
       ],
       "updated_at": "2026-07-16T14:00:00Z"
     }
   ],
-
   "orders": [
     {
       "id": 1001,
       "user_id": 1,
       "items": [
-        { "product_id": 2, "quantity": 1, "price": 150000 },
-        { "product_id": 5, "quantity": 1, "price": 160000 }
+        {
+          "product_id": 2,
+          "quantity": 1,
+          "price": 150000
+        },
+        {
+          "product_id": 5,
+          "quantity": 1,
+          "price": 160000
+        }
       ],
       "total_amount": 310000,
       "currency": "VND",
@@ -248,7 +318,11 @@
       "id": 1002,
       "user_id": 2,
       "items": [
-        { "product_id": 4, "quantity": 5, "price": 45000 }
+        {
+          "product_id": 4,
+          "quantity": 5,
+          "price": 45000
+        }
       ],
       "total_amount": 225000,
       "currency": "VND",
@@ -259,7 +333,6 @@
       "delivered_at": null
     }
   ],
-
   "contacts": [
     {
       "id": 1,
@@ -282,7 +355,6 @@
       "created_at": "2026-07-10T13:45:00Z"
     }
   ],
-
   "reviews": [
     {
       "id": 1,
@@ -309,17 +381,23 @@
       "created_at": "2026-06-15T16:00:00Z"
     }
   ],
-
   "wishlist": [
     {
       "id": 1,
       "user_id": 1,
-      "product_ids": [3, 5, 7]
+      "product_ids": [
+        3,
+        5,
+        7
+      ]
     },
     {
       "id": 2,
       "user_id": 2,
-      "product_ids": [1, 2]
+      "product_ids": [
+        1,
+        2
+      ]
     }
   ]
 }

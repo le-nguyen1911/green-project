@@ -7,7 +7,6 @@ const breadcrumbMap = {
     "/account/orders": "Đơn hàng",
     "/account/address": "Địa chỉ",
     "/account/profile": "Thông tin tài khoản",
-    "/account/password": "Đổi mật khẩu",
 };
 const AccountBreadcrumb = () => {
     const location = useLocation()

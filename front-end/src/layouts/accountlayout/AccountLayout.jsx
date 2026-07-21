@@ -52,11 +52,7 @@ const AccountLayout = () => {
                             Thông tin tài khoản
                         </NavLink>
 
-                        <NavLink to="/account/password" className={({ isActive }) =>
-                            `${isActive ? styles.active : ""}`
-                        }>
-                            Đổi mật khẩu
-                        </NavLink>
+
 
                     </div>
 
