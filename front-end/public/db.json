@@ -227,7 +227,7 @@
   "users": [
     {
       "id": 1,
-      "fullname": "Nguyễn Văn A",
+      "full_name": "Nguyễn Văn A",
       "email": "nguyenvana@gmail.com",
       "phone": "0901234567",
       "password_hash": "hashed_password_1",
@@ -238,7 +238,7 @@
     },
     {
       "id": 2,
-      "fullname": "Trần Thị B",
+      "full_name": "Trần Thị B",
       "email": "tranthib@gmail.com",
       "phone": "0912345678",
       "password_hash": "hashed_password_2",
@@ -249,7 +249,7 @@
     },
     {
       "id": 3,
-      "fullname": "Admin Store",
+      "full_name": "Admin Store",
       "email": "admin@coffeeshop.vn",
       "phone": "0900000000",
       "password_hash": "hashed_password_admin",

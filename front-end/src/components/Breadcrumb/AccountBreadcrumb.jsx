@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import styles from "./AccountBreadcrumb.module.css";
+import { useUser } from '../../hooks/UserContext';
 
 const breadcrumbMap = {
     "/account": "Tài khoản",
@@ -10,7 +11,7 @@ const breadcrumbMap = {
 };
 const AccountBreadcrumb = () => {
     const location = useLocation()
-
+    const { logout } = useUser()
     const current = breadcrumbMap[location.pathname]
     return (
         <div className={styles.breadcrumb}>
@@ -32,7 +33,7 @@ const AccountBreadcrumb = () => {
                 )}
             </div>
 
-            <div className={styles.logout}>
+            <div className={styles.logout} onClick={logout}>
                 Đăng xuất
             </div>
         </div>

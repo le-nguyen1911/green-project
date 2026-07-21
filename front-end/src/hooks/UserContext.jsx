@@ -7,7 +7,7 @@ const UserProvider = ({ children }) => {
 		const savedUser = localStorage.getItem("user");
 		return savedUser ? JSON.parse(savedUser) : null;
 	});
-
+	const [password, setPassword] = useState("");
 	const isAuthenticated = user !== null;
 
 	const login = (userData) => {
@@ -29,7 +29,9 @@ const UserProvider = ({ children }) => {
 		setUser(null);
 		localStorage.removeItem("user");
 	};
-
+	const getPassword = (password) => {
+		setPassword(password);
+	};
 	const changeEmail = (newEmail) => {
 		if (!user) return;
 
@@ -58,8 +60,10 @@ const UserProvider = ({ children }) => {
 		<UserContext.Provider
 			value={{
 				user,
+				password,
 				isAuthenticated,
 				login,
+				getPassword,
 				logout,
 				changeEmail,
 				updateProfile,

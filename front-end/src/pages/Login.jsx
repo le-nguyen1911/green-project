@@ -11,10 +11,10 @@ const Login = () => {
         email: "",
         password: "",
     });
-
+    
     const navigate = useNavigate();
 
-    const { isAuthenticated, login } = useUser();
+    const { isAuthenticated, login, getPassword } = useUser();
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -47,7 +47,7 @@ const Login = () => {
             }
 
             login(foundUser);
-
+            getPassword(foundUser.password_hash)
             if (foundUser.role === "admin") {
                 navigate("/admin");
             } else {
