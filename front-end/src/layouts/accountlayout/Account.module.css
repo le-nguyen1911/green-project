@@ -14,8 +14,7 @@
 
 .sidebar {
     width: 280px;
-    flex: 0 0 280px;
-    height: max-content;
+    flex-shrink: 0;
 }
 
 .sidebarInner {
@@ -68,17 +67,21 @@
 }
 
 @media (max-width: 768px) {
+
     .heroAccount {
         text-align: center;
         padding: 30px 0;
     }
 
     .wrapper {
+        display: flex;
         flex-direction: column;
+        gap: 15px;
     }
 
     .sidebar {
         width: 100%;
+        flex: none;
     }
 
     .sidebarInner {
@@ -86,7 +89,9 @@
         display: flex;
         overflow-x: auto;
         white-space: nowrap;
-        border: none;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        scrollbar-width: none;
     }
 
     .sidebarInner::-webkit-scrollbar {
@@ -95,8 +100,9 @@
 
     .sidebar a {
         flex: 0 0 auto;
-        border-bottom: none;
+        padding: 14px 18px;
         border-right: 1px solid #eee;
+        border-bottom: none;
         text-align: center;
     }
 
@@ -106,5 +112,7 @@
 
     .content {
         width: 100%;
+        margin-top: 0;
+        padding-top: 0;
     }
 }

@@ -5,7 +5,7 @@ import AccountBreadcrumb from "../../components/Breadcrumb/AccountBreadcrumb";
 
 const AccountLayout = () => {
     return (
-        <>
+        <div className="">
             <div className={styles.heroAccount}>
                 <div className="container">
                     <h1>TÀI KHOẢN</h1>
@@ -61,7 +61,7 @@ const AccountLayout = () => {
                     </main>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
