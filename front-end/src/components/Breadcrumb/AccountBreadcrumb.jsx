@@ -6,7 +6,6 @@ import { useUser } from '../../hooks/UserContext';
 const breadcrumbMap = {
     "/account": "Tài khoản",
     "/account/orders": "Đơn hàng",
-    "/account/address": "Địa chỉ",
     "/account/profile": "Thông tin tài khoản",
 };
 const AccountBreadcrumb = () => {

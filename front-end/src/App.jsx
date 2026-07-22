@@ -35,7 +35,6 @@ const App = () => {
                 <Route path='account' element={<AccountLayout />} >
                   <Route index element={<Profile />} />
                   <Route path='orders' />
-                  <Route path='address' />
                   <Route path='profile' element={<InformationPesonal />} />
                 </Route>
               </Route>

@@ -37,15 +37,6 @@ const AccountLayout = () => {
                             </NavLink>
 
                             <NavLink
-                                to="/account/address"
-                                className={({ isActive }) =>
-                                    isActive ? styles.active : ""
-                                }
-                            >
-                                Địa chỉ
-                            </NavLink>
-
-                            <NavLink
                                 to="/account/profile"
                                 className={({ isActive }) =>
                                     isActive ? styles.active : ""

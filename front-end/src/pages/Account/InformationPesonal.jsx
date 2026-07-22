@@ -75,6 +75,7 @@ const InformationPesonal = () => {
         fullName: "",
         email: "",
         phone: "",
+        address: ""
     });
 
     const handlerOldPassword = (e) => {
@@ -109,7 +110,8 @@ const InformationPesonal = () => {
             const res = await axios.patch(`users/${user.id}`, {
                 full_name: formData.fullName,
                 email: formData.email,
-                phone: formData.phone
+                phone: formData.phone,
+                address: formData.address
             });
 
             updateProfile(formData)
@@ -138,7 +140,6 @@ const InformationPesonal = () => {
 
             alert("Đổi mật khẩu thành công");
             setIsChangepw(false);
-
             setOldPassword("");
             setNewPassword("");
             setConfirmPassword("");
@@ -243,6 +244,25 @@ const InformationPesonal = () => {
                                 name="email"
                                 value={formData.email || ""}
                                 placeholder="Email"
+                                disabled={!isEdit}
+                                onChange={handleChange}
+                            />
+                        </InputGroup.Root>
+                    </div>
+                    <div className="col-12">
+                        <label className="mb-2 d-block">
+                            Địa chỉ
+                        </label>
+
+                        <InputGroup.Root>
+                            <InputGroup.Addon>
+                                <Map />
+                            </InputGroup.Addon>
+
+                            <InputText
+                                name="address"
+                                value={formData.address || ""}
+                                placeholder="ddress"
                                 disabled={!isEdit}
                                 onChange={handleChange}
                             />
