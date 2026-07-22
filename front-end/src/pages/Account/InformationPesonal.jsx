@@ -176,7 +176,7 @@ const InformationPesonal = () => {
                 <Button
                     rounded
                     type="button"
-                    className="mb-3 !bg-[#6f4e37] !border-none"
+                    className="mb-3 bg-[#6f4e37]! border-none!"
                     onClick={() => {
                         if (isEdit) {
                             handleSave();
@@ -257,7 +257,7 @@ const InformationPesonal = () => {
                 <Button
                     rounded
                     type="button"
-                    className="mb-4 !bg-[#6f4e37] !border-none"
+                    className="mb-4 bg-[#6f4e37]! border-none!"
                     onClick={() => {
                         if (isChangepw) {
                             handlerpw();
