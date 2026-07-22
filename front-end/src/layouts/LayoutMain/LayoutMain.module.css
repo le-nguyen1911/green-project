@@ -1,0 +1,18 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: transform .3s ease;
+}
+
+
+.show {
+    transform: translateY(0);
+}
+
+
+.hide {
+    transform: translateY(-100%);
+}

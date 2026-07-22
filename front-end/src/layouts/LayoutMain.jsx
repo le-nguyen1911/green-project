@@ -1,84 +1,206 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/logo.png";
-import 'primeicons/primeicons.css';
+import "primeicons/primeicons.css";
+import styles from "./LayoutMain/LayoutMain.module.css";
 
 
 const LayoutMain = () => {
 
+    const [showMenu, setShowMenu] = useState(true);
+    const lastScroll = useRef(0);
+
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScroll.current && currentScroll > 100) {
+                setShowMenu(false);
+            }
+            else {
+                setShowMenu(true);
+            }
+
+            lastScroll.current = currentScroll;
+        };
+
+
+        window.addEventListener("scroll", handleScroll);
+
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+
+    }, []);
+
+
     return (
         <>
-            <nav className="container-fluid border-bottom bg-white py-3">
-                <div className="container">
-                    <div className="row align-items-center">
 
-                        <div className="col-4">
-                            <ul className="nav gap-4 fw-semibold">
-                                <li className="nav-item">
-                                    <Link className="nav-link text-dark p-0" to="gioi-thieu">
-                                        GIỚI THIỆU
-                                    </Link>
-                                </li>
 
-                                <li className="nav-item">
-                                    <Link className="nav-link text-dark p-0" to="san-pham">
-                                        SẢN PHẨM
-                                    </Link>
-                                </li>
+            <header
+                className={`${styles.header} ${showMenu ? styles.show : styles.hide
+                    }`}
+            >
 
-                                <li className="nav-item">
-                                    <Link className="nav-link text-dark p-0" to="tin-tuc">
-                                        TIN TỨC
-                                    </Link>
-                                </li>
+                <nav className="container-fluid border-bottom bg-white py-3">
 
-                                <li className="nav-item">
-                                    <Link className="nav-link text-dark p-0" to="lien-he">
-                                        LIÊN HỆ
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                    <div className="container">
 
-                        <Link to="home-page" className="col-4 text-center">
-                            <img src={logo} alt="Logo" className="img-fluid" style={{ width: "170px", height: "auto" }}
-                            />
-                        </Link>
+                        <div className="row align-items-center">
 
-                        <div className="col-4">
-                            <div className="d-flex justify-content-end align-items-center gap-4">
 
-                                <div className="d-flex align-items-center border-bottom">
-                                    <input type="text"
-                                        placeholder="Tìm kiếm"
-                                        className="border-0 shadow-none"
-                                    />
-                                    <i className="pi pi-search ms-2"></i>
-                                </div>
-                                <Link to={"/wishlist"} className='text-dark'>
-                                    <i className="pi pi-heart fs-5"></i>
-                                </Link>
+                            <div className="col-4">
 
-                                <Link to={"/account"} className='text-dark'>
-                                    <i className="pi pi-user fs-5"></i>
-                                </Link>
+                                <ul className="nav gap-4 fw-semibold">
 
-                                <span className="position-relative">
-                                    <i className="pi pi-shopping-cart fs-5"></i>
+                                    <li>
+                                        <Link
+                                            className="nav-link text-dark p-0"
+                                            to="/gioi-thieu"
+                                        >
+                                            GIỚI THIỆU
+                                        </Link>
+                                    </li>
 
-                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-                                        0
-                                    </span>
-                                </span>
+
+                                    <li>
+                                        <Link
+                                            className="nav-link text-dark p-0"
+                                            to="/san-pham"
+                                        >
+                                            SẢN PHẨM
+                                        </Link>
+                                    </li>
+
+
+                                    <li>
+                                        <Link
+                                            className="nav-link text-dark p-0"
+                                            to="/tin-tuc"
+                                        >
+                                            TIN TỨC
+                                        </Link>
+                                    </li>
+
+
+                                    <li>
+                                        <Link
+                                            className="nav-link text-dark p-0"
+                                            to="/lien-he"
+                                        >
+                                            LIÊN HỆ
+                                        </Link>
+                                    </li>
+
+
+                                </ul>
 
                             </div>
+
+
+
+                            <Link
+                                to="/"
+                                className="col-4 text-center"
+                            >
+
+                                <img
+                                    src={logo}
+                                    alt="Logo"
+                                    className="img-fluid"
+                                    style={{
+                                        width: "170px"
+                                    }}
+                                />
+
+                            </Link>
+
+
+
+
+                            <div className="col-4">
+
+                                <div className="d-flex justify-content-end align-items-center gap-4">
+
+
+                                    <div className="d-flex align-items-center border-bottom">
+
+                                        <input
+                                            type="text"
+                                            placeholder="Tìm kiếm"
+                                            className="border-0 shadow-none"
+                                        />
+
+                                        <i className="pi pi-search ms-2"></i>
+
+                                    </div>
+
+
+
+                                    <Link to="/wishlist" className="text-dark">
+                                        <i className="pi pi-heart fs-5"></i>
+                                    </Link>
+
+
+
+                                    <Link to="/account" className="text-dark">
+                                        <i className="pi pi-user fs-5"></i>
+                                    </Link>
+
+
+
+                                    <span className="position-relative">
+
+                                        <i className="pi pi-shopping-cart fs-5"></i>
+
+
+                                        <span
+                                            className="
+                                            position-absolute 
+                                            top-0 
+                                            start-100 
+                                            translate-middle 
+                                            badge 
+                                            rounded-pill 
+                                            bg-warning 
+                                            text-dark
+                                            "
+                                        >
+                                            0
+                                        </span>
+
+
+                                    </span>
+
+
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
-                </div>
-            </nav>
+
+                </nav>
+
+            </header>
+
+
+
+
 
             <Outlet />
+
+
+
+
+
             <footer className='bg-light'>
 
                 <div className="footer">
@@ -159,8 +281,11 @@ const LayoutMain = () => {
                 </div>
 
             </footer>
+
+
         </>
     );
 };
+
 
 export default LayoutMain;
