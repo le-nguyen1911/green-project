@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import axios from 'axios';
-import LayoutMain from './layouts/LayoutMain';
 import AccountLayout from './layouts/AccountLayout/AccountLayout';
 import 'primeicons/primeicons.css';
-import Homapage from './homepage/Homepage';
+import LayoutMain from './layouts/LayoutMain/LayoutMain';
+import Homepage from './pages/homepage/Homepage';
+
+
 
 axios.defaults.baseURL = 'http://localhost:3000/';
 
@@ -13,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<LayoutMain />}>
-          <Route path='/' element={<Homapage />} />
+          <Route path='/' element={<Homepage />} />
         </Route>
       </Routes>
     </BrowserRouter >

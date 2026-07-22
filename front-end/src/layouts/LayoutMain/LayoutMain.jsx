@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import "primeicons/primeicons.css";
-import styles from "./LayoutMain/LayoutMain.module.css";
+import styles from "../LayoutMain/LayoutMain.module.css";
 
 
 const LayoutMain = () => {
@@ -275,7 +275,7 @@ const LayoutMain = () => {
                     </div>
 
                     <div className="copyright d-flex justify-content-center">
-                        © Thiết kế và lập trình bởi MONA.Media
+                        © Thiết kế và lập trình bởi
                     </div>
 
                 </div>
