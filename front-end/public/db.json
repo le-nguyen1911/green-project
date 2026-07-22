@@ -1,31 +1,31 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cà phê rang xay",
       "slug": "ca-phe-rang-xay",
       "description": "Các loại cà phê rang xay nguyên chất"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Cà phê hòa tan",
       "slug": "ca-phe-hoa-tan",
       "description": "Cà phê hòa tan tiện lợi"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Cà phê đặc sản",
       "slug": "ca-phe-dac-san",
       "description": "Cà phê cao cấp, đặc sản vùng miền"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cà phê đóng lon/chai",
       "slug": "ca-phe-dong-lon",
       "description": "Cà phê pha sẵn, uống liền"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Dụng cụ pha chế",
       "slug": "dung-cu-pha-che",
       "description": "Phin, máy pha, ly, bình đựng cà phê"
@@ -33,7 +33,7 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cà phê Robusta rang xay",
       "slug": "ca-phe-robusta-rang-xay",
       "category_id": 1,
@@ -54,7 +54,7 @@
       "created_at": "2026-01-10T08:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Cà phê Arabica nguyên chất",
       "slug": "ca-phe-arabica-nguyen-chat",
       "category_id": 1,
@@ -74,7 +74,7 @@
       "created_at": "2026-02-05T08:00:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Cà phê chồn (Weasel Coffee)",
       "slug": "ca-phe-chon",
       "category_id": 3,
@@ -94,7 +94,7 @@
       "created_at": "2026-01-20T08:00:00Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cà phê hòa tan 3 trong 1",
       "slug": "ca-phe-hoa-tan-3in1",
       "category_id": 2,
@@ -114,7 +114,7 @@
       "created_at": "2026-03-01T08:00:00Z"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Cà phê phin truyền thống",
       "slug": "ca-phe-phin-truyen-thong",
       "category_id": 1,
@@ -134,7 +134,7 @@
       "created_at": "2026-02-18T08:00:00Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Cà phê sữa đá đóng lon",
       "slug": "ca-phe-sua-da-dong-lon",
       "category_id": 4,
@@ -154,7 +154,7 @@
       "created_at": "2026-03-10T08:00:00Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Phin nhôm pha cà phê",
       "slug": "phin-nhom-pha-ca-phe",
       "category_id": 5,
@@ -176,7 +176,7 @@
   ],
   "blogs": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Cách pha cà phê phin chuẩn vị Việt Nam",
       "slug": "cach-pha-ca-phe-phin-chuan-vi",
       "author": "Nguyễn Văn An",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Sự khác biệt giữa Arabica và Robusta",
       "slug": "khac-biet-arabica-robusta",
       "author": "Trần Thị Bình",
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Top 5 quán cà phê đặc sản đáng thử ở Việt Nam",
       "slug": "top-5-quan-ca-phe-dac-san",
       "author": "Lê Minh Châu",
@@ -226,33 +226,33 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "full_name": "Nguyễn Văn A",
       "email": "nguyenvana@gmail.com",
       "phone": "0901234567",
-      "password_hash": "hashed_password_1",
+      "password": "Nguyen@1911",
       "address": "123 Đường Lê Lợi, Quận 1, TP.HCM",
       "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "customer",
       "created_at": "2026-01-05T08:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "full_name": "Trần Thị B",
       "email": "tranthib@gmail.com",
       "phone": "0912345678",
-      "password_hash": "hashed_password_2",
+      "password": "hashed_password_2",
       "address": "45 Đường Trần Phú, Đà Nẵng",
       "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "customer",
       "created_at": "2026-02-10T08:00:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "full_name": "Admin Store",
       "email": "admin@coffeeshop.vn",
       "phone": "0900000000",
-      "password_hash": "hashed_password_admin",
+      "password": "hashed_password_admin",
       "address": "Kho tổng, Đắk Lắk",
       "avatar": "https://avatarexpress.edu.vn/wp-content/uploads/2025/12/avatar-meo-ngau-31.jpg",
       "role": "admin",
@@ -261,7 +261,7 @@
   ],
   "cart": [
     {
-      "id": 1,
+      "id": "1",
       "user_id": 1,
       "items": [
         {
@@ -278,7 +278,7 @@
       "updated_at": "2026-07-15T10:30:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "user_id": 2,
       "items": [
         {
@@ -292,7 +292,7 @@
   ],
   "orders": [
     {
-      "id": 1001,
+      "id": "1001",
       "user_id": 1,
       "items": [
         {
@@ -315,7 +315,7 @@
       "delivered_at": "2026-06-04T15:00:00Z"
     },
     {
-      "id": 1002,
+      "id": "1002",
       "user_id": 2,
       "items": [
         {
@@ -335,7 +335,7 @@
   ],
   "contacts": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Phạm Văn C",
       "email": "phamvanc@gmail.com",
       "phone": "0987654321",
@@ -345,7 +345,7 @@
       "created_at": "2026-06-20T10:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Hoàng Thị D",
       "email": "hoangthid@gmail.com",
       "phone": "0978123456",
@@ -357,7 +357,7 @@
   ],
   "reviews": [
     {
-      "id": 1,
+      "id": "1",
       "product_id": 1,
       "user_id": 1,
       "rating": 5,
@@ -365,7 +365,7 @@
       "created_at": "2026-06-05T12:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "product_id": 2,
       "user_id": 2,
       "rating": 4,
@@ -373,7 +373,7 @@
       "created_at": "2026-06-10T09:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "product_id": 3,
       "user_id": 1,
       "rating": 5,
@@ -383,7 +383,7 @@
   ],
   "wishlist": [
     {
-      "id": 1,
+      "id": "1",
       "user_id": 1,
       "product_ids": [
         3,
@@ -392,12 +392,13 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "user_id": 2,
       "product_ids": [
         1,
         2
       ]
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
