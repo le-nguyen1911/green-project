@@ -1,141 +1,158 @@
 {
   "categories": [
-    { "id": 1, "name": "Cà phê rang xay", "slug": "ca-phe-rang-xay", "description": "Các loại cà phê rang xay nguyên chất" },
-    { "id": 2, "name": "Cà phê hòa tan", "slug": "ca-phe-hoa-tan", "description": "Cà phê hòa tan tiện lợi" },
-    { "id": 3, "name": "Cà phê đặc sản", "slug": "ca-phe-dac-san", "description": "Cà phê cao cấp, đặc sản vùng miền" },
-    { "id": 4, "name": "Cà phê đóng lon/chai", "slug": "ca-phe-dong-lon", "description": "Cà phê pha sẵn, uống liền" },
-    { "id": 5, "name": "Dụng cụ pha chế", "slug": "dung-cu-pha-che", "description": "Phin, máy pha, ly, bình đựng cà phê" }
-  ],
-
-  "products": [
     {
       "id": 1,
-      "name": "Cà phê Robusta rang xay",
-      "slug": "ca-phe-robusta-rang-xay",
-      "category_id": 1,
-      "price": 95000,
-      "sale_price": 85000,
-      "currency": "VND",
-      "stock": 120,
-      "origin": "Đắk Lắk, Việt Nam",
-      "roast_level": "Đậm",
-      "weight": "500g",
-      "images": ["robusta_1.jpg", "robusta_2.jpg"],
-      "description": "Cà phê Robusta nguyên chất, vị đắng mạnh, hàm lượng caffeine cao",
-      "rating": 4.5,
-      "review_count": 32,
-      "created_at": "2026-01-10T08:00:00Z"
+      "name": "Cà phê rang xay Blend",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate6.png"
     },
     {
       "id": 2,
-      "name": "Cà phê Arabica nguyên chất",
-      "slug": "ca-phe-arabica-nguyen-chat",
-      "category_id": 1,
-      "price": 150000,
-      "sale_price": null,
-      "currency": "VND",
-      "stock": 80,
-      "origin": "Cầu Đất, Đà Lạt",
-      "roast_level": "Vừa",
-      "weight": "500g",
-      "images": ["arabica_1.jpg"],
-      "description": "Vị chua thanh, hương thơm nhẹ nhàng, hậu vị ngọt",
-      "rating": 4.7,
-      "review_count": 21,
-      "created_at": "2026-02-05T08:00:00Z"
+      "name": "Cà phê hạt Robusta",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate5.png"
     },
     {
       "id": 3,
-      "name": "Cà phê chồn (Weasel Coffee)",
-      "slug": "ca-phe-chon",
-      "category_id": 3,
-      "price": 850000,
-      "sale_price": null,
-      "currency": "VND",
-      "stock": 15,
-      "origin": "Buôn Ma Thuột",
-      "roast_level": "Đậm",
-      "weight": "250g",
-      "images": ["ca_phe_chon_1.jpg"],
-      "description": "Cà phê đặc sản cao cấp, hương vị đặc trưng độc đáo",
-      "rating": 4.9,
-      "review_count": 8,
-      "created_at": "2026-01-20T08:00:00Z"
+      "name": "Cà phê hạt nguyên chất",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate4.png"
     },
     {
       "id": 4,
-      "name": "Cà phê hòa tan 3 trong 1",
-      "slug": "ca-phe-hoa-tan-3in1",
-      "category_id": 2,
-      "price": 45000,
-      "sale_price": null,
-      "currency": "VND",
-      "stock": 300,
-      "origin": "Việt Nam",
-      "roast_level": "Vừa",
-      "weight": "20 gói x 20g",
-      "images": ["hoa_tan_1.jpg"],
-      "description": "Tiện lợi, pha nhanh, vị ngọt béo hài hòa",
-      "rating": 4.2,
-      "review_count": 54,
-      "created_at": "2026-03-01T08:00:00Z"
+      "name": "Cà phê hạt Liberica",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate3.png"
     },
     {
       "id": 5,
-      "name": "Cà phê phin truyền thống",
-      "slug": "ca-phe-phin-truyen-thong",
-      "category_id": 1,
-      "price": 180000,
-      "sale_price": 160000,
-      "currency": "VND",
-      "stock": 60,
-      "origin": "Sài Gòn",
-      "roast_level": "Đậm",
-      "weight": "1kg",
-      "images": ["phin_1.jpg"],
-      "description": "Pha phin đậm đà, hương thơm nồng, phù hợp gu truyền thống",
-      "rating": 4.6,
-      "review_count": 40,
-      "created_at": "2026-02-18T08:00:00Z"
+      "name": "Cà phê hạt Excelsa",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate2.png"
     },
     {
       "id": 6,
-      "name": "Cà phê sữa đá đóng lon",
-      "slug": "ca-phe-sua-da-dong-lon",
-      "category_id": 4,
-      "price": 15000,
-      "sale_price": null,
+      "name": "Cà phê hạt Arabica",
+      "image": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/h28-cate1.png"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "original_product_id": "22476",
+      "sku": "TOY05432-2-1-2-1-1-2-1",
+      "name": "Cà phê Enchanted Espresso",
+      "price": 2679000,
       "currency": "VND",
-      "stock": 500,
-      "origin": "Việt Nam",
-      "roast_level": "Vừa",
-      "weight": "330ml",
-      "images": ["lon_1.jpg"],
-      "description": "Sẵn sàng uống ngay, vị ngọt béo đặc trưng cà phê sữa đá",
-      "rating": 4.3,
-      "review_count": 67,
-      "created_at": "2026-03-10T08:00:00Z"
+      "formatted_price": "2,679,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-enchanted-espresso/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/san-pham-3.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai-2.png"
+      },
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "original_product_id": "22474",
+      "sku": "TOY05432-2-1-2-1-1-2",
+      "name": "Cà phê Emerald Burst",
+      "price": 2119000,
+      "currency": "VND",
+      "formatted_price": "2,119,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-emerald-burst/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/san-pham-2.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai-2.png"
+      },
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "original_product_id": "22469",
+      "sku": "TOY05432-2-1-2-1-1-1",
+      "name": "Cà phê Velvet Delight",
+      "price": 1769000,
+      "currency": "VND",
+      "formatted_price": "1,769,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-velvet-delight/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/san-pham-1.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai-2.png"
+      },
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "original_product_id": "22467",
+      "sku": "TOY05432-2-1-2-1-1",
+      "name": "Cà phê Midnight Roast",
+      "price": 2119000,
+      "currency": "VND",
+      "formatted_price": "2,119,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-midnight-roast/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/cafe2-500x500-1.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai-2.png"
+      },
+      "rating": 0
+    },
+    {
+      "id": 5,
+      "original_product_id": "22460",
+      "sku": "TOY05432-2-1-2-1",
+      "name": "Cà phê Sunrise Blend",
+      "price": 1859000,
+      "currency": "VND",
+      "formatted_price": "1,859,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-sunrise-blend/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/cafe4-550x550-1.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai-2.png"
+      },
+      "rating": 0
+    },
+    {
+      "id": 6,
+      "original_product_id": "22458",
+      "sku": "TOY05432-1-1-1-1-1",
+      "name": "Cà phê Radiance",
+      "price": 1579000,
+      "currency": "VND",
+      "formatted_price": "1,579,000₫",
+      "url": "https://cafengon.monamedia.net/product/ca-phe-radiance/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/cafe7-500x500-1.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai.png"
+      },
+      "rating": 0
     },
     {
       "id": 7,
-      "name": "Phin nhôm pha cà phê",
-      "slug": "phin-nhom-pha-ca-phe",
-      "category_id": 5,
-      "price": 55000,
-      "sale_price": null,
+      "original_product_id": "22456",
+      "sku": null,
+      "name": "Cà phê Elixir",
+      "price": 1579000,
       "currency": "VND",
-      "stock": 90,
-      "origin": "Việt Nam",
-      "roast_level": null,
-      "weight": "1 cái",
-      "images": ["phin_nhom_1.jpg"],
-      "description": "Phin nhôm truyền thống, bền, dễ vệ sinh",
-      "rating": 4.4,
-      "review_count": 18,
-      "created_at": "2026-01-25T08:00:00Z"
+      "formatted_price": null,
+      "url": "https://cafengon.monamedia.net/product/ca-phe-elixir/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/hd-8k-wallpaper-stock-photographic-image-generative-ai-3.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai.png"
+      },
+      "rating": null
+    },
+    {
+      "id": 8,
+      "original_product_id": "22456",
+      "sku": null,
+      "name": "Cà phê Enchant",
+      "price": 1579000,
+      "currency": "VND",
+      "formatted_price": null,
+      "url": "https://cafengon.monamedia.net/product/ca-phe-elixir/",
+      "images": {
+        "primary": "https://cafengon.monamedia.net/wp-content/uploads/2024/12/tea4-500x500-1.png",
+        "hover": "https://cafengon.monamedia.net/wp-content/uploads/2023/08/hd-8k-wallpaper-stock-photographic-image-generative-ai.png"
+      },
+      "rating": null
     }
   ],
-
   "blogs": [
     {
       "id": 1,
@@ -147,7 +164,11 @@
       "summary": "Hướng dẫn từng bước pha cà phê phin đúng chuẩn tại nhà",
       "content": "Nội dung chi tiết về cách pha cà phê phin...",
       "published_at": "2026-04-01T09:00:00Z",
-      "tags": ["pha chế", "cà phê phin", "mẹo hay"]
+      "tags": [
+        "pha chế",
+        "cà phê phin",
+        "mẹo hay"
+      ]
     },
     {
       "id": 2,
@@ -159,7 +180,11 @@
       "summary": "So sánh hương vị, hàm lượng caffeine và cách trồng của hai loại cà phê phổ biến",
       "content": "Nội dung chi tiết về Arabica và Robusta...",
       "published_at": "2026-04-15T09:00:00Z",
-      "tags": ["arabica", "robusta", "kiến thức"]
+      "tags": [
+        "arabica",
+        "robusta",
+        "kiến thức"
+      ]
     },
     {
       "id": 3,
@@ -171,10 +196,13 @@
       "summary": "Danh sách những quán cà phê đặc sản nổi tiếng",
       "content": "Nội dung chi tiết về các quán cà phê...",
       "published_at": "2026-05-02T09:00:00Z",
-      "tags": ["review", "quán cà phê", "đặc sản"]
+      "tags": [
+        "review",
+        "quán cà phê",
+        "đặc sản"
+      ]
     }
   ],
-
   "users": [
     {
       "id": 1,
@@ -207,14 +235,21 @@
       "created_at": "2025-12-01T08:00:00Z"
     }
   ],
-
   "cart": [
     {
       "id": 1,
       "user_id": 1,
       "items": [
-        { "product_id": 1, "quantity": 2, "price": 85000 },
-        { "product_id": 6, "quantity": 3, "price": 15000 }
+        {
+          "product_id": 1,
+          "quantity": 2,
+          "price": 85000
+        },
+        {
+          "product_id": 6,
+          "quantity": 3,
+          "price": 15000
+        }
       ],
       "updated_at": "2026-07-15T10:30:00Z"
     },
@@ -222,19 +257,30 @@
       "id": 2,
       "user_id": 2,
       "items": [
-        { "product_id": 3, "quantity": 1, "price": 850000 }
+        {
+          "product_id": 3,
+          "quantity": 1,
+          "price": 850000
+        }
       ],
       "updated_at": "2026-07-16T14:00:00Z"
     }
   ],
-
   "orders": [
     {
       "id": 1001,
       "user_id": 1,
       "items": [
-        { "product_id": 2, "quantity": 1, "price": 150000 },
-        { "product_id": 5, "quantity": 1, "price": 160000 }
+        {
+          "product_id": 2,
+          "quantity": 1,
+          "price": 150000
+        },
+        {
+          "product_id": 5,
+          "quantity": 1,
+          "price": 160000
+        }
       ],
       "total_amount": 310000,
       "currency": "VND",
@@ -248,7 +294,11 @@
       "id": 1002,
       "user_id": 2,
       "items": [
-        { "product_id": 4, "quantity": 5, "price": 45000 }
+        {
+          "product_id": 4,
+          "quantity": 5,
+          "price": 45000
+        }
       ],
       "total_amount": 225000,
       "currency": "VND",
@@ -259,7 +309,6 @@
       "delivered_at": null
     }
   ],
-
   "contacts": [
     {
       "id": 1,
@@ -282,7 +331,6 @@
       "created_at": "2026-07-10T13:45:00Z"
     }
   ],
-
   "reviews": [
     {
       "id": 1,
@@ -309,17 +357,23 @@
       "created_at": "2026-06-15T16:00:00Z"
     }
   ],
-
   "wishlist": [
     {
       "id": 1,
       "user_id": 1,
-      "product_ids": [3, 5, 7]
+      "product_ids": [
+        3,
+        5,
+        7
+      ]
     },
     {
       "id": 2,
       "user_id": 2,
-      "product_ids": [1, 2]
+      "product_ids": [
+        1,
+        2
+      ]
     }
   ]
 }

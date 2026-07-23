@@ -17,3 +17,87 @@
     pointer-events: none;
 
 }
+
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3d2417;
+}
+
+.desc {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+.item {
+    padding: 10px;
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin: 10px;
+    line-height: 1.3em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.price {
+    color: #9e1118;
+    font-size: 20px;
+}
+
+.pagiBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4; 
+    background: transparent;
+    color: #c4c4c4;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.pagiBtn:hover {
+    border-color: #666;
+    color: #666;
+    background-color: #f9f9f9;
+}
+
+.pagiText {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+}

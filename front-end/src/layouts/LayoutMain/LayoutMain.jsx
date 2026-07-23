@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import "primeicons/primeicons.css";
 import styles from "../LayoutMain/LayoutMain.module.css";
 
@@ -110,7 +109,7 @@ const LayoutMain = () => {
                             >
 
                                 <img
-                                    src={logo}
+                                    src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/The-mona-logo-e1736923312403.png"
                                     alt="Logo"
                                     className="img-fluid"
                                     style={{
@@ -207,7 +206,7 @@ const LayoutMain = () => {
                     <div className="footer-content row d-flex justify-content-center align-items-center border-bottom" >
 
                         <div className="footer-col about col-lg-3 col-md-12 mb-12 mb-lg-0">
-                            <img src={logo} className="logo" style={{ width: "200px", height: "auto" }} />
+                            <img src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/The-mona-logo-e1736923312403.png" className="logo" style={{ width: "200px", height: "auto" }} />
 
                             <p>
                                 Cà phê nguyên chất được chế biến 100% nguyên chất,
