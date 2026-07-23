@@ -45,7 +45,7 @@ export default function AlignmentDemo() {
                     <Rating value={5} disabled cancel={false} />
 
                     <h4 className={styles.name}>{product.name}</h4>
-                    
+
                     <h4 className={styles.price}>{product.price.toLocaleString("vi-VN")}₫</h4>
                 </div>
             </div>
