@@ -1,18 +1,18 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import axios from 'axios';
-import LayoutMain from './layouts/LayoutMain';
-import AccountLayout from './layouts/AccountLayout/AccountLayout';
+import LayoutMain from './layouts/LayoutMain.jsx';
+import AccountLayout from './layouts/AccountLayout/AccountLayout.jsx';
 import 'primeicons/primeicons.css';
 import { UserProvider } from './hooks/UserContext';
 import ProtectedRoute from './components/ProtectedRoute';
-import Login from './pages/Login';
-import Profile from './pages/Account/Profile';
+import Login from './pages/Login.jsx';
+import Profile from './pages/Account/Profile.jsx';
 import InformationPesonal from './pages/Account/InformationPesonal';
 import { PrimeReactProvider } from '@primereact/core';
 import Aura from '@primeuix/themes/aura';
-import Order from './pages/Account/Order';
-import Cart from './pages/Cart';
+import Order from './pages/Account/Order.jsx';
+import Cart from './pages/Cart.jsx';
 
 
 const primereact = {
