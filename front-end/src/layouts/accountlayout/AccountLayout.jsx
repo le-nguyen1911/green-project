@@ -1,72 +1,59 @@
-import React from 'react'
+import React from "react";
 import styles from "./Account.module.css";
-import { NavLink, Outlet } from 'react-router-dom';
-import AccountBreadcrumb from '../../components/Breadcrumb/AccountBreadcrumb';
-
+import { NavLink, Outlet } from "react-router-dom";
+import AccountBreadcrumb from "../../components/Breadcrumb/AccountBreadcrumb";
 
 const AccountLayout = () => {
     return (
-        <>
+        <div className="">
             <div className={styles.heroAccount}>
-
                 <div className="container">
-
                     <h1>TÀI KHOẢN</h1>
-
                     <AccountBreadcrumb />
-
                 </div>
-
             </div>
+
             <div className="container py-5">
-
                 <div className={styles.wrapper}>
+                    <aside className={styles.sidebar}>
+                        <div className={styles.sidebarInner}>
+                            <NavLink
+                                to="/account"
+                                end
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ""
+                                }
+                            >
+                                Trang tài khoản
+                            </NavLink>
 
-                    <div className={styles.sidebar}>
+                            <NavLink
+                                to="/account/orders"
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ""
+                                }
+                            >
+                                Đơn hàng
+                            </NavLink>
 
-                        <NavLink end to="/account" end
-                            to="/account"
-                            className={({ isActive }) =>
-                                `${isActive ? styles.active : ""}`
-                            }>
-                            Trang tài khoản
-                        </NavLink>
+                            <NavLink
+                                to="/account/profile"
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ""
+                                }
+                            >
+                                Thông tin tài khoản
+                            </NavLink>
+                        </div>
+                    </aside>
 
-                        <NavLink to="/account/orders" end
-                            className={({ isActive }) =>
-                                `${isActive ? styles.active : ""}`
-                            }>
-                            Đơn hàng
-                        </NavLink>
-
-                        <NavLink to="/account/address" className={({ isActive }) =>
-                            `${isActive ? styles.active : ""}`
-                        }>
-
-                            Địa chỉ
-                        </NavLink>
-
-                        <NavLink to="/account/profile" className={({ isActive }) =>
-                            `${isActive ? styles.active : ""}`
-                        }>
-                            Thông tin tài khoản
-                        </NavLink>
-
-
-
-                    </div>
-
-                    <div className={styles.content}>
-
+                    <main className={styles.content}>
                         <Outlet />
-
-                    </div>
-
+                    </main>
                 </div>
-
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default AccountLayout
+export default AccountLayout;

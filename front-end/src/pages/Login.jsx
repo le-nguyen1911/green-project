@@ -11,7 +11,7 @@ const Login = () => {
         email: "",
         password: "",
     });
-
+    
     const navigate = useNavigate();
 
     const { isAuthenticated, login } = useUser();
@@ -38,7 +38,7 @@ const Login = () => {
             const foundUser = res.data.find(
                 (user) =>
                     user.email === formData.email &&
-                    user.password_hash === formData.password
+                    user.password === formData.password
             );
 
             if (!foundUser) {
@@ -47,7 +47,6 @@ const Login = () => {
             }
 
             login(foundUser);
-
             if (foundUser.role === "admin") {
                 navigate("/admin");
             } else {

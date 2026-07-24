@@ -7,7 +7,6 @@ const UserProvider = ({ children }) => {
 		const savedUser = localStorage.getItem("user");
 		return savedUser ? JSON.parse(savedUser) : null;
 	});
-
 	const isAuthenticated = user !== null;
 
 	const login = (userData) => {
@@ -29,7 +28,6 @@ const UserProvider = ({ children }) => {
 		setUser(null);
 		localStorage.removeItem("user");
 	};
-
 	const changeEmail = (newEmail) => {
 		if (!user) return;
 

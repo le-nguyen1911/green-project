@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import axios from 'axios';
 import LayoutMain from './layouts/LayoutMain';
@@ -11,6 +11,8 @@ import Profile from './pages/Account/Profile';
 import InformationPesonal from './pages/Account/InformationPesonal';
 import { PrimeReactProvider } from '@primereact/core';
 import Aura from '@primeuix/themes/aura';
+import Order from './pages/Account/Order';
+import Cart from './pages/Cart';
 
 
 const primereact = {
@@ -31,11 +33,11 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LayoutMain />}>
               <Route path='login' element={<Login />} />
+              <Route path='cart' element={<Cart />} />
               <Route element={<ProtectedRoute />} >
                 <Route path='account' element={<AccountLayout />} >
                   <Route index element={<Profile />} />
-                  <Route path='orders' />
-                  <Route path='address' />
+                  <Route path='orders' element={<Order />}/>
                   <Route path='profile' element={<InformationPesonal />} />
                 </Route>
               </Route>
