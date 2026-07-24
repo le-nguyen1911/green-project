@@ -5,6 +5,7 @@ import AlignmentDemo2 from "./AlignmentDemo2";
 import AlignmentDemo3 from "./AlignmentDemo3";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import AlignmentDemo4 from "./AlignmentDemo4";
 
 
 const Homepage = () => {
@@ -49,20 +50,7 @@ const Homepage = () => {
                             />
                         </div>
 
-                        <div className="col-md-8">
-                            <div className="row mb-4">
-                                <div className="col-md-4">
-                                    <h2>THƠM NGON CHẤT LƯỢNG</h2>
-                                </div>
-
-                                <div className="col-md-8">
-                                    <h6>
-                                        Những hạt cà phê này thường được trồng theo
-                                        phương pháp bền vững, không sử dụng hóa chất
-                                        độc hại.
-                                    </h6>
-                                </div>
-                            </div>
+                        <div className="col-md-8 ">
                             <AlignmentDemo />
                         </div>
 
@@ -70,17 +58,17 @@ const Homepage = () => {
                 </div>
 
                 <div className="container my-5">
-                    <div >
-                        <h1 className=" d-flex justify-content-center">Sản phẩm đóng gói </h1>
-                        <h6 className=" d-flex justify-content-center">Nhâm nhi mỗi ngày với những loại cà phê đặc biệt như Arabica, Robusta, Espresso và nhiều hơn nữa!</h6>
-                    </div>
 
                     <AlignmentDemo2 />
 
                 </div>
 
-                <div>
+                <div className="container my-5">
                     <AlignmentDemo3 />
+                </div>
+
+                <div>
+                    <AlignmentDemo4 />
                 </div>
 
             </div >

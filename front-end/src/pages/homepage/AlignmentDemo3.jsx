@@ -16,7 +16,6 @@ export default function AlignmentDemo3() {
 
 
             <div className="container" style={{
-                width: '1200px',
                 overflow: 'hidden',
                 border: '1px solid #c4c4c4',
                 borderRadius: '10px',

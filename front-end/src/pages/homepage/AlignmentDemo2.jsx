@@ -66,6 +66,10 @@ export default function AlignmentDemo() {
 
     return (
         <section className="container">
+            <div >
+                <h1 className=" d-flex justify-content-center">Sản phẩm đóng gói </h1>
+                <h6 className=" d-flex justify-content-center">Nhâm nhi mỗi ngày với những loại cà phê đặc biệt như Arabica, Robusta, Espresso và nhiều hơn nữa!</h6>
+            </div>
             <Carousel
                 value={products}
                 itemTemplate={productTemplate}

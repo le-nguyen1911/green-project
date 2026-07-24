@@ -57,6 +57,19 @@ export default function AlignmentDemo() {
 
     return (
         <section className="container">
+            <div className="row mb-4">
+                <div className="col-md-4">
+                    <h2>THƠM NGON CHẤT LƯỢNG</h2>
+                </div>
+
+                <div className="col-md-8">
+                    <h6>
+                        Những hạt cà phê này thường được trồng theo
+                        phương pháp bền vững, không sử dụng hóa chất
+                        độc hại.
+                    </h6>
+                </div>
+            </div>
             <Carousel
                 value={products}
                 itemTemplate={productTemplate}
