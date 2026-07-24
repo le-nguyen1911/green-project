@@ -82,6 +82,7 @@
     .sidebar {
         width: 100%;
         flex: none;
+        flex-shrink: 0;
     }
 
     .sidebarInner {
