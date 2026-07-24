@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import styles from "../homepage/Homepage.module.css";
 import AlignmentDemo from "./AlignmentDemo";
 import AlignmentDemo2 from "./AlignmentDemo2";
+import AlignmentDemo3 from "./AlignmentDemo3";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
+
 const Homepage = () => {
+
+
     return (
         <>
             <div>
@@ -75,34 +79,9 @@ const Homepage = () => {
 
                 </div>
 
-                <div className="container" style={{
-                    border: '1px solid #c4c4c4',
-                    borderRadius: '10px',
-                }}>
-                    <div className="row">
-                        <div className="col-6">
-                            <h1 className="d-flex justify-content-center ">Sự vượt trội hàng đầu</h1>
-                            <h6 className="d-flex justify-content-center ">Khám phá yếu tố chất lượng hàng đầu của sản phẩm cà phê tại cửa hàng của chúng tôi, nơi mang đến cho bạn trải nghiệm thưởng thức cà phê nguyên chất tuyệt vời nhất.</h6>
-                            <div className="d-flex justify-content-center">
-                                <div>
-                                    <h2>01</h2>
-                                    <h2>02</h2>
-                                    <h2>03</h2>
-                                </div>
-                                <div>
-                                    <h2>Hạt cà phê chất lượng cao</h2>
-                                    <h2>Rang xay tại chỗ</h2>
-                                    <h2>Đa dạng sản phẩm</h2>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-6">
-                            <img src="https://chapelyard.co.uk/wp-content/uploads/2025/02/cafe-dereham.png" className="w-100" />
-                        </div>
-                    </div>
+                <div>
+                    <AlignmentDemo3 />
                 </div>
-
 
             </div >
         </>
