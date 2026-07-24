@@ -357,7 +357,7 @@ const Order = () => {
                         <div className="mt-6 space-y-4">
                           {selectedOrder.items.map((item) => {
                             const product = products.find(
-                              (p) => Number(p.id) === Number(item.product_id),
+                              (p) => p.id === item.product_id,
                             );
 
                             return (
