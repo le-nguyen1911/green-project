@@ -45,18 +45,31 @@ const Cart = () => {
     );
   };
   const removeItem = async (cartId, productId) => {
-    const cart = carts.find(item => item.id === cartId)
+    const cart = carts.find((item) => item.id === cartId);
 
-    const newItems = cart.items.filter((item) =>
-      item.product_id !== productId
-    );
-    await axios.patch(`cart/${cartId}`, { items: newItems })
+    const newItems = cart.items.filter((item) => item.product_id !== productId);
+    await axios.patch(`cart/${cartId}`, { items: newItems });
     setCarts((prev) =>
       prev.map((item) =>
         item.id === cartId ? { ...item, items: newItems } : item,
       ),
     );
   };
+  const totalquantity = carts.reduce(
+    (cartTotal, cart) =>
+      cartTotal +
+      cart.items.reduce((itemTotal, item) => itemTotal + item.quantity, 0),
+    0,
+  );
+  const totalPrice = carts.reduce(
+    (cartTotal, cart) =>
+      cartTotal +
+      cart.items.reduce(
+        (itemTotal, item) => itemTotal + item.quantity * item.price,
+        0,
+      ),
+    0,
+  );
   useEffect(() => {
     const fetchData = async () => {
       const [cartRes, productRes] = await Promise.all([
@@ -97,7 +110,10 @@ const Cart = () => {
                     return (
                       <tr key={item.product_id}>
                         <td className="text-center">
-                          <div className="flex justify-center cursor-pointer">
+                          <div
+                            className="flex justify-center cursor-pointer"
+                            onClick={() => removeItem(cart.id, item.product_id)}
+                          >
                             <Trash size={18} />
                           </div>
                         </td>
@@ -153,7 +169,20 @@ const Cart = () => {
             </table>
           </div>
         </div>
-        <div className=" bg-white shadow rounded-2xl p-2"></div>
+        <div className="lg:col-span-1 bg-white p-2 ">
+          <div className="border p-2">
+            <p className="">Tổng giỏ hàng</p>
+            <p className="border-t text-[#6f4e37] font-bold">
+              Tổng sản phẩm : {totalquantity}
+            </p>
+            <p className="border-t text-[#6f4e37] font-bold">
+              Tổng tiền: {totalPrice}
+            </p>
+          </div>
+          <div className="w-full bg-[#6f4e37] mt-2 text-white p-2 flex justify-center">
+            Thanh toán ngay
+          </div>
+        </div>
       </div>
     </div>
   );
