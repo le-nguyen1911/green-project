@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import 'primeicons/primeicons.css';
@@ -13,7 +13,6 @@ const LayoutMain = () => {
         const fetchData = async () => {
             const res = await axios('cart')
             const cart = res.data.filter((item) => item.user_id === user.id);
-            console.log(cart);
             setCarts(cart)
         }
         fetchData()

@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Order from "./Account/Order";
-import { Button } from "bootstrap";
+import { useEffect, useState } from "react";
 import { Trash } from "@primeicons/react";
 import { useUser } from "../hooks/UserContext";
 import axios from "axios";
-import { Prev } from "react-bootstrap/esm/PageItem";
 
 const Cart = () => {
   const [carts, setCarts] = useState([]);
@@ -77,7 +74,6 @@ const Cart = () => {
         axios.get("products"),
       ]);
       const cart = cartRes.data.filter((item) => item.user_id === user.id);
-      console.log(cart);
 
       setCarts(cart);
       setProducts(productRes.data);
@@ -138,7 +134,7 @@ const Cart = () => {
                               <button
                                 type="button"
                                 className="bg-gray-200 px-2 py-1"
-                                onClick={(e) =>
+                                onClick={() =>
                                   decrease(cart.id, item.product_id)
                                 }
                               >
@@ -147,7 +143,7 @@ const Cart = () => {
                               <span className="px-3 py-1">{item.quantity}</span>
                               <button
                                 className="bg-gray-200 px-2 py-1"
-                                onClick={(e) =>
+                                onClick={() =>
                                   increase(cart.id, item.product_id)
                                 }
                                 type="button"

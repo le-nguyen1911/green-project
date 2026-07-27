@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Account.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import AccountBreadcrumb from "../../components/Breadcrumb/AccountBreadcrumb";

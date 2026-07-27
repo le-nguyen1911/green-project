@@ -1,4 +1,4 @@
-import { Check, ChevronDown, Envelope, Map, Phone } from '@primeicons/react';
+import { Check, Envelope, Map, Phone } from '@primeicons/react';
 import { Tag } from "@primereact/ui/tag";
 import { User } from '@primeicons/react/user';
 import { InputGroup } from '@primereact/ui/inputgroup';
