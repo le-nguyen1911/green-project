@@ -70,7 +70,6 @@ const Homepage = () => {
                 <div>
                     <AlignmentDemo4 />
                 </div>
-
             </div >
         </>
     );

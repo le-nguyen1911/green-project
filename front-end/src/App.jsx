@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import AccountLayout from './layouts/AccountLayout/AccountLayout';
 import LayoutMain from './layouts/LayoutMain/LayoutMain';
 import Homepage from './pages/homepage/Homepage';
+import introduce from './pages/Utilities/introduce';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "primereact/resources/themes/lara-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -18,6 +18,7 @@ const App = () => {
       <Routes>
         <Route element={<LayoutMain />}>
           <Route path="/" element={<Homepage />} />
+          <Route path='gioi-thieu' element={<introduce />} />
         </Route>
       </Routes>
     </BrowserRouter>

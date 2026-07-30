@@ -1,14 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "primeicons/primeicons.css";
 import styles from "../LayoutMain/LayoutMain.module.css";
+import { BreadCrumb } from "primereact/breadcrumb";
 
 
 const LayoutMain = () => {
+    const location = useLocation();
+
+    const isHomePage = location.pathname === "/";
 
     const [showMenu, setShowMenu] = useState(true);
     const lastScroll = useRef(0);
 
+    const [breadcrumbItems, setBreadcrumbItems] = useState([]);
+
+    const home = {
+        icon: "pi pi-home",
+        url: "/",
+    };
 
     useEffect(() => {
 
@@ -191,10 +201,20 @@ const LayoutMain = () => {
             </header>
 
 
+            {!isHomePage && (
+                <div className={styles.heroAccount}>
+                    <BreadCrumb
+                        model={breadcrumbItems}
+                        home={home}
+                    />
+                </div>
+            )}
+            <main style={{
+                height: '90px',
+            }} />
 
 
-
-            <Outlet />
+            <Outlet context={{ setBreadcrumbItems }} />
 
 
 
