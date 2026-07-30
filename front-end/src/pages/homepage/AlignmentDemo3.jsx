@@ -22,19 +22,15 @@ export default function AlignmentDemo3() {
             }}>
                 <div className="row">
                     <div className="p-card border-round-2xl surface-card shadow-2 max-w-30rem mx-auto my-5 overflow-hidden font-sans col-6">
-                        {/* Nội dung chính */}
                         <div className="p-5 text-center">
-                            {/* Tiêu đề */}
                             <h2 className="text-3xl font-extrabold uppercase mt-2 mb-3" style={{ color: '#3d180a' }}>
                                 SỰ VƯỢT TRỘI HÀNG ĐẦU
                             </h2>
 
-                            {/* Mô tả */}
                             <p className="text-color-secondary text-sm line-height-3 mb-5 px-2">
                                 Khám phá yếu tố chất lượng hàng đầu của sản phẩm cà phê tại cửa hàng của chúng tôi, nơi mang đến cho bạn trải nghiệm thưởng thức cà phê nguyên chất tuyệt vời nhất.
                             </p>
 
-                            {/* Danh sách 01, 02, 03 */}
                             <div className="max-w-25rem mx-auto mb-5">
                                 {features.map((item) => (
                                     <div key={item.id}>
@@ -48,7 +44,7 @@ export default function AlignmentDemo3() {
                             </div>
 
                             <Link
-                                to="/san-pham" // Đường dẫn trang bạn muốn chuyển tới
+                                to="/san-pham" 
                                 className="no-underline inline-block font-semibold px-5 py-3 border-round-lg shadow-2 transition-colors transition-duration-200"
                                 style={{ backgroundColor: '#6f3f22', color: '#ffffff', width: '200px', borderRadius: "8px", textDecoration: "none", }}
                             >
