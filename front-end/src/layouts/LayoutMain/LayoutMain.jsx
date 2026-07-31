@@ -13,6 +13,8 @@ const LayoutMain = () => {
     const [showMenu, setShowMenu] = useState(true);
     const lastScroll = useRef(0);
 
+    const [transparent, setTransparent] = useState(true);
+
     const [breadcrumbItems, setBreadcrumbItems] = useState([]);
 
     const home = {
@@ -21,15 +23,32 @@ const LayoutMain = () => {
     };
 
     useEffect(() => {
+        const pages = {
+            "/gioi-thieu": "Giới thiệu",
+            "/san-pham": "Sản phẩm",
+            "/tin-tuc": "Tin tức",
+            "/lien-he": "Liên hệ",
+        };
+
+        const title = pages[location.pathname] || "";
+
+        setBreadcrumbItems([
+            {
+                label: title,
+            },
+        ]);
+    }, [location.pathname]);
+
+    useEffect(() => {
 
         const handleScroll = () => {
-
             const currentScroll = window.scrollY;
+
+            setTransparent(currentScroll < 600);
 
             if (currentScroll > lastScroll.current && currentScroll > 100) {
                 setShowMenu(false);
-            }
-            else {
+            } else {
                 setShowMenu(true);
             }
 
@@ -52,166 +71,188 @@ const LayoutMain = () => {
 
 
             <header
-                className={`${styles.header} ${showMenu ? styles.show : styles.hide
-                    }`}
+                className={`${styles.header} ${showMenu ? styles.show : styles.hide}`}
+                style={{
+                    backgroundColor: isHomePage && transparent ? "transparent" : "#fff",
+                    transition: "all .3s ease",
+                }}
             >
-
-                <nav className="container-fluid border-bottom bg-white py-3">
-
+                <nav
+                    className="container-fluid py-3"
+                    style={{
+                        backgroundColor: isHomePage && transparent ? "transparent" : "#fff",
+                        borderBottom:
+                            isHomePage && transparent
+                                ? "none"
+                                : "1px solid #dee2e6",
+                        transition: "all .3s ease",
+                    }}
+                >
                     <div className="container">
-
                         <div className="row align-items-center">
 
-
+                            {/* MENU */}
                             <div className="col-4">
-
                                 <ul className="nav gap-4 fw-semibold">
 
                                     <li>
                                         <Link
-                                            className="nav-link text-dark p-0"
                                             to="/gioi-thieu"
+                                            className="nav-link p-0"
+                                            style={{
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                            }}
                                         >
                                             GIỚI THIỆU
                                         </Link>
                                     </li>
 
-
                                     <li>
                                         <Link
-                                            className="nav-link text-dark p-0"
                                             to="/san-pham"
+                                            className="nav-link p-0"
+                                            style={{
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                            }}
                                         >
                                             SẢN PHẨM
                                         </Link>
                                     </li>
 
-
                                     <li>
                                         <Link
-                                            className="nav-link text-dark p-0"
                                             to="/tin-tuc"
+                                            className="nav-link p-0"
+                                            style={{
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                            }}
                                         >
                                             TIN TỨC
                                         </Link>
                                     </li>
 
-
                                     <li>
                                         <Link
-                                            className="nav-link text-dark p-0"
                                             to="/lien-he"
+                                            className="nav-link p-0"
+                                            style={{
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                            }}
                                         >
                                             LIÊN HỆ
                                         </Link>
                                     </li>
 
-
                                 </ul>
-
                             </div>
 
+                            <div className="col-4 text-center">
+                                <Link to="/">
+                                    <img
+                                        src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/The-mona-logo-e1736923312403.png"
+                                        className="img-fluid"
+                                        style={{ width: "170px" }}
+                                        alt="Logo"
+                                    />
+                                </Link>
+                            </div>
 
-
-                            <Link
-                                to="/"
-                                className="col-4 text-center"
-                            >
-
-                                <img
-                                    src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/The-mona-logo-e1736923312403.png"
-                                    alt="Logo"
-                                    className="img-fluid"
-                                    style={{
-                                        width: "170px"
-                                    }}
-                                />
-
-                            </Link>
-
-
-
-
+                            {/* RIGHT */}
                             <div className="col-4">
-
                                 <div className="d-flex justify-content-end align-items-center gap-4">
 
-
-                                    <div className="d-flex align-items-center border-bottom">
-
+                                    <div
+                                        className="d-flex align-items-center"
+                                        style={{
+                                            borderBottom: `1px solid ${isHomePage && transparent ? "#fff" : "#000"
+                                                }`,
+                                        }}
+                                    >
                                         <input
                                             type="text"
                                             placeholder="Tìm kiếm"
                                             className="border-0 shadow-none"
+                                            style={{
+                                                background: "transparent",
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                                outline: "none",
+                                            }}
                                         />
 
-                                        <i className="pi pi-search ms-2"></i>
-
+                                        <i
+                                            className="pi pi-search ms-2"
+                                            style={{
+                                                color: isHomePage && transparent ? "#fff" : "#000",
+                                            }}
+                                        ></i>
                                     </div>
 
-
-
-                                    <Link to="/wishlist" className="text-dark">
+                                    <Link
+                                        to="/wishlist"
+                                        style={{
+                                            color: isHomePage && transparent ? "#fff" : "#000",
+                                        }}
+                                    >
                                         <i className="pi pi-heart fs-5"></i>
                                     </Link>
 
-
-
-                                    <Link to="/account" className="text-dark">
+                                    <Link
+                                        to="/account"
+                                        style={{
+                                            color: isHomePage && transparent ? "#fff" : "#000",
+                                        }}
+                                    >
                                         <i className="pi pi-user fs-5"></i>
                                     </Link>
 
-
-
-                                    <span className="position-relative">
-
+                                    <span
+                                        className="position-relative"
+                                        style={{
+                                            color: isHomePage && transparent ? "#fff" : "#000",
+                                        }}
+                                    >
                                         <i className="pi pi-shopping-cart fs-5"></i>
 
-
                                         <span
-                                            className="
-                                            position-absolute 
-                                            top-0 
-                                            start-100 
-                                            translate-middle 
-                                            badge 
-                                            rounded-pill 
-                                            bg-warning 
-                                            text-dark
-                                            "
+                                            className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
                                         >
                                             0
                                         </span>
-
-
                                     </span>
 
-
                                 </div>
-
                             </div>
 
-
                         </div>
-
                     </div>
-
                 </nav>
-
             </header>
 
+            {!isHomePage && (<main style={{ height: "90px" }} />)}
 
             {!isHomePage && (
-                <div className={styles.heroAccount}>
-                    <BreadCrumb
-                        model={breadcrumbItems}
-                        home={home}
-                    />
+                <div
+                    className={styles.heroAccount}
+                    style={{
+                        backgroundImage:
+                            "url('https://cafengon.monamedia.net/wp-content/uploads/2023/04/bread-bg.png')",
+                    }}
+                >
+
+                    <div className="container">
+
+                        <h1 className={styles.heroTitle}>
+                            {breadcrumbItems[0]?.label}
+                        </h1>
+
+                        <BreadCrumb
+                            model={breadcrumbItems}
+                            home={home}
+                        />
+
+                    </div>
                 </div>
             )}
-            <main style={{
-                height: '90px',
-            }} />
 
 
             <Outlet context={{ setBreadcrumbItems }} />
