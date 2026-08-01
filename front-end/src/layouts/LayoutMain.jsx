@@ -1,181 +1,217 @@
-import { useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
-import 'primeicons/primeicons.css';
-import { useUser } from '../hooks/UserContext';
-import axios from 'axios';
+import "primeicons/primeicons.css";
+import { useUser } from "../hooks/UserContext";
+import axios from "axios";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
+import styles from "./LayoutMain.module.css";
 
+const heroTitleMap = {
+  "/cart": "GIỎ HÀNG",
+  "/wishlist": "YÊU THÍCH",
+  "/gioi-thieu": "GIỚI THIỆU",
+  "/san-pham": "SẢN PHẨM",
+  "/tin-tuc": "TIN TỨC",
+  "/lien-he": "LIÊN HỆ",
+};
 
 const LayoutMain = () => {
-    const { user } = useUser()
-    const [carts, setCarts] = useState([])
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await axios('cart')
-            const cart = res.data.filter((item) => item.user_id === user.id);
-            setCarts(cart)
-        }
-        fetchData()
-    }, []);
-    return (
-      <>
-        <nav className="container-fluid border-bottom bg-white py-3">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-4">
-                <ul className="nav gap-4 fw-semibold">
-                  <li className="nav-item">
-                    <Link className="nav-link text-dark p-0" to="gioi-thieu">
-                      GIỚI THIỆU
-                    </Link>
-                  </li>
+  const { user } = useUser();
+  const [carts, setCarts] = useState([]);
+  const location = useLocation();
 
-                  <li className="nav-item">
-                    <Link className="nav-link text-dark p-0" to="san-pham">
-                      SẢN PHẨM
-                    </Link>
-                  </li>
+  useEffect(() => {
+    if (!user) return; 
 
-                  <li className="nav-item">
-                    <Link className="nav-link text-dark p-0" to="tin-tuc">
-                      TIN TỨC
-                    </Link>
-                  </li>
+    const fetchData = async () => {
+      try {
+        const res = await axios("cart");
+        const cart = res.data.filter((item) => item.user_id === user.id);
+        setCarts(cart);
+      } catch (err) {
+        console.error("Lỗi khi tải giỏ hàng:", err);
+      }
+    };
 
-                  <li className="nav-item">
-                    <Link className="nav-link text-dark p-0" to="lien-he">
-                      LIÊN HỆ
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+    fetchData();
+  }, [user]);
+  const hideHero =
+    location.pathname === "/" ||
+    location.pathname === "/login" ||
+    location.pathname.startsWith("/account");
 
-              <Link to="home-page" className="col-4 text-center">
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="img-fluid"
-                  style={{ width: "170px", height: "auto" }}
-                />
-              </Link>
+  const heroTitle = heroTitleMap[location.pathname] || "";
 
-              <div className="col-4">
-                <div className="d-flex justify-content-end align-items-center gap-4">
-                  <div className="d-flex align-items-center border-bottom">
-                    <input
-                      type="text"
-                      placeholder="Tìm kiếm"
-                      className="border-0 shadow-none"
-                    />
-                    <i className="pi pi-search ms-2"></i>
-                  </div>
-                  <Link to={"/wishlist"} className="text-dark">
-                    <i className="pi pi-heart fs-5"></i>
+  return (
+    <>
+      <nav className="container-fluid border-bottom bg-white py-3">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-4">
+              <ul className="nav gap-4 fw-semibold">
+                <li className="nav-item">
+                  <Link className="nav-link text-dark p-0" to="gioi-thieu">
+                    GIỚI THIỆU
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-dark p-0" to="san-pham">
+                    SẢN PHẨM
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-dark p-0" to="tin-tuc">
+                    TIN TỨC
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-dark p-0" to="lien-he">
+                    LIÊN HỆ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <Link to="/" className="col-4 text-center">
+              <img
+                src={logo}
+                alt="Logo"
+                className="img-fluid"
+                style={{ width: "170px", height: "auto" }}
+              />
+            </Link>
+
+            <div className="col-4">
+              <div className="d-flex justify-content-end align-items-center gap-4">
+                <div className="d-flex align-items-center border-bottom">
+                  <input
+                    type="text"
+                    placeholder="Tìm kiếm"
+                    className="border-0 shadow-none"
+                  />
+                  <i className="pi pi-search ms-2"></i>
+                </div>
+                <Link to={"/wishlist"} className="text-dark">
+                  <i className="pi pi-heart fs-5"></i>
+                </Link>
+
+                <Link to={"/account"} className="text-dark">
+                  <i className="pi pi-user fs-5"></i>
+                </Link>
+
+                <span className="position-relative">
+                  <Link to={"/cart"} className="text-dark">
+                    <i className="pi pi-shopping-cart fs-5"></i>
                   </Link>
 
-                  <Link to={"/account"} className="text-dark">
-                    <i className="pi pi-user fs-5"></i>
-                  </Link>
-
-                  <span className="position-relative">
-                    <Link to={"/cart"} className="text-dark">
-                      <i className="pi pi-shopping-cart fs-5"></i>
-                    </Link>
-
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-[#6f4e37]! text-white">
-                      {carts.length}
-                    </span>
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-[#6f4e37]! text-white">
+                    {carts.length}
                   </span>
-                </div>
+                </span>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <Outlet />
-        <footer className="bg-light">
-          <div className="footer">
-            <div className="footer-content row d-flex justify-content-center align-items-center border-bottom">
-              <div className="footer-col about col-lg-3 col-md-12 mb-12 mb-lg-0">
-                <img
-                  src={logo}
-                  className="logo"
-                  style={{ width: "200px", height: "auto" }}
-                />
+      {!hideHero && (
+        <div className={styles.hero}>
+          <div className="container">
+            {heroTitle && <h1>{heroTitle}</h1>}
+            <Breadcrumb />
+          </div>
+        </div>
+      )}
 
-                <p>
-                  Cà phê nguyên chất được chế biến 100% nguyên chất, không pha
-                  trộn với bất kỳ loại hạt cà phê nào khác.
-                </p>
-              </div>
+      <Outlet />
 
-              <div className="footer-col col-lg-2 col-md-6 col-6  mb-3 mb-lg-0">
-                <h3>DANH MỤC</h3>
+      <footer className="bg-light">
+        <div className="footer">
+          <div className="footer-content row d-flex justify-content-center align-items-center border-bottom">
+            <div className="footer-col about col-lg-3 col-md-12 mb-12 mb-lg-0">
+              <img
+                src={logo}
+                className="logo"
+                style={{ width: "200px", height: "auto" }}
+              />
 
-                <ul>
-                  <li>Trang chủ</li>
-                  <li>Giới thiệu</li>
-                  <li>Sản phẩm</li>
-                  <li>Tin tức</li>
-                  <li>Liên hệ</li>
-                </ul>
-              </div>
-
-              <div className="footer-col col-lg-2 col-md-6 col-6 mb-3 mb-lg-0">
-                <h3>HỖ TRỢ</h3>
-
-                <ul>
-                  <li>Câu hỏi thường gặp</li>
-                  <li>Dịch vụ khách hàng</li>
-                  <li>Vị trí cửa hàng</li>
-                  <li>Sản phẩm bán chạy</li>
-                  <li>Manufactures</li>
-                </ul>
-              </div>
-
-              <div className="footer-col col-lg-2 col-md-12 col-12 mb-3 mb-lg-0">
-                <h3>CHÍNH SÁCH</h3>
-
-                <ul>
-                  <li>Chính sách bảo mật</li>
-                  <li>Chính sách giao hàng</li>
-                  <li>Chính sách đổi trả</li>
-                  <li>Chính sách bảo hành</li>
-                  <li>Điều khoản & điều kiện</li>
-                </ul>
-              </div>
-
-              <div className="footer-col subscribe col-lg-2 col-md-12 mb-3 mb-lg-0">
-                <h3>ĐĂNG KÝ NHẬN TIN TỨC</h3>
-
-                <p>Đăng ký ngay để nhận các tin tức khuyến mãi mới nhất.</p>
-
-                <div className="newsletter">
-                  <input type="email" placeholder="Nhập email" />
-                  <button>ĐĂNG KÝ</button>
-                </div>
-
-                <div className="social">
-                  <a href="#">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
+              <p>
+                Cà phê nguyên chất được chế biến 100% nguyên chất, không pha
+                trộn với bất kỳ loại hạt cà phê nào khác.
+              </p>
             </div>
 
-            <div className="copyright d-flex justify-content-center">
-              © Thiết kế và lập trình bởi MONA.Media
+            <div className="footer-col col-lg-2 col-md-6 col-6  mb-3 mb-lg-0">
+              <h3>DANH MỤC</h3>
+
+              <ul>
+                <li>Trang chủ</li>
+                <li>Giới thiệu</li>
+                <li>Sản phẩm</li>
+                <li>Tin tức</li>
+                <li>Liên hệ</li>
+              </ul>
+            </div>
+
+            <div className="footer-col col-lg-2 col-md-6 col-6 mb-3 mb-lg-0">
+              <h3>HỖ TRỢ</h3>
+
+              <ul>
+                <li>Câu hỏi thường gặp</li>
+                <li>Dịch vụ khách hàng</li>
+                <li>Vị trí cửa hàng</li>
+                <li>Sản phẩm bán chạy</li>
+                <li>Manufactures</li>
+              </ul>
+            </div>
+
+            <div className="footer-col col-lg-2 col-md-12 col-12 mb-3 mb-lg-0">
+              <h3>CHÍNH SÁCH</h3>
+
+              <ul>
+                <li>Chính sách bảo mật</li>
+                <li>Chính sách giao hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Chính sách bảo hành</li>
+                <li>Điều khoản & điều kiện</li>
+              </ul>
+            </div>
+
+            <div className="footer-col subscribe col-lg-2 col-md-12 mb-3 mb-lg-0">
+              <h3>ĐĂNG KÝ NHẬN TIN TỨC</h3>
+
+              <p>Đăng ký ngay để nhận các tin tức khuyến mãi mới nhất.</p>
+
+              <div className="newsletter">
+                <input type="email" placeholder="Nhập email" />
+                <button>ĐĂNG KÝ</button>
+              </div>
+
+              <div className="social">
+                <a href="#">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i className="fab fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </footer>
-      </>
-    );
+
+          <div className="copyright d-flex justify-content-center">
+            © Thiết kế và lập trình bởi MONA.Media
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 };
 
 export default LayoutMain;
