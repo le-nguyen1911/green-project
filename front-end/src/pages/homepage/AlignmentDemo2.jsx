@@ -4,7 +4,6 @@ import { Carousel } from "primereact/carousel";
 import styles from "../homepage/Homepage.module.css";
 import { Rating } from "primereact/rating";
 
-
 export default function AlignmentDemo() {
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(0);
@@ -34,14 +33,34 @@ export default function AlignmentDemo() {
         return (
             <div className={styles.item}>
                 <div className={styles.card}>
-                    <img
-                        src={product.images.primary}
-                        alt={product.name}
-                        style={{
-                            maxWidth: "400px",
-                            maxHeight: "250px"
-                        }}
-                    />
+                    <div className={styles.imageWrapper}>
+                        <div className="d-flex justify-content-center">
+                            <img
+                                src={product.images.primary}
+                                alt={product.name}
+                                className={styles.defaultImage}
+                                style={{
+                                    maxWidth: "400px",
+                                    maxHeight: "250px"
+                                }}
+                            />
+                            {product.images.hover && (
+                                <div className="d-flex justify-content-center">
+                                    <img
+                                        src={product.images.hover}
+                                        alt={product.name}
+                                        className={styles.hoverImage}
+                                        style={{
+                                            maxWidth: "400px",
+                                            maxHeight: "250px"
+                                        }}
+                                    />
+                                </div>
+
+                            )}
+                        </div>
+                    </div>
+
                     <Rating value={5} disabled cancel={false} />
 
                     <h4 className={styles.name}>{product.name}</h4>

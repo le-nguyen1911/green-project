@@ -32,12 +32,14 @@ export default function AlignmentDemo() {
         return (
             <div className={styles.item}>
                 <div className={styles.card}>
-                    <img
-                        src={product.image}
-                        alt={product.name}
-                        className={styles.image}
-                    />
-                    <h4 className={styles.name}>{product.name}</h4>
+                    <div className={styles.imgBox}>
+                        <img
+                            src={product.image}
+                            alt={product.name}
+                            className={styles.image}
+                        />
+                        <h4 className={styles.name}>{product.name}</h4>
+                    </div>
                 </div>
             </div>
         );

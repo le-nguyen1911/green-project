@@ -1,4 +1,4 @@
-
+import styles from "../Utilities/Introduce.module.css"
 import { Image } from "primereact/image";
 
 
@@ -16,7 +16,8 @@ const Introduce = () => {
 
                         <p>
                             Chúng tôi là điểm đến lý tưởng cho những người yêu cà phê,
-                            văn võ và nhiều sản phẩm khác. Với cam kết mang đến sự đa
+                            văn võ và nhiều sản phẩm khác. Với cam kết mang đến sự đa789
+
                             dạng và chất lượng, cửa hàng của chúng tôi không chỉ là nơi
                             để thưởng thức hương vị đặc biệt của cà phê mà còn là điểm
                             đến lý tưởng cho những người đam mê văn chương và sự sáng tạo.
@@ -31,17 +32,17 @@ const Introduce = () => {
                     </div>
                     <div className="col-8">
                         <Image
+                            className={styles.imgBox}
                             src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/about2.png"
                             alt="Image"
                             width="100%"
                             pt={{
                                 image: {
                                     style: {
-                                        borderRadius: "16px",
+                                        borderRadius: "8px",
                                     },
                                 },
                             }}
-
                         />
                     </div>
                 </div>
@@ -221,8 +222,9 @@ const Introduce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-8 ">
                         <Image
+                            className={styles.imgBox}
                             src="https://cafengon.monamedia.net/wp-content/uploads/2025/01/blog2.jpg"
                             alt="Image"
                             width="100%" pt={{
