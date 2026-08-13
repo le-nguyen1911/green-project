@@ -43,6 +43,7 @@
 }
 
 .imgBox img {
+    touch-action: pan-y;
     object-fit: cover;
     display: block;
     transition: transform 0.4s;

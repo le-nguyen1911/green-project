@@ -5,7 +5,9 @@ import styles from './Homepage.module.css'
 export default function AdvancedDemo() {
     return (
 
-        <div className='container my-5'>
+        <div className='container my-5' style={{
+            width: '67%'
+        }}>
             <div className="mb-4 text-center">
                 <h1>Hành trình sản xuất cà phê</h1>
                 <h6 className="text-muted">
